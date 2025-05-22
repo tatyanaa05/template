@@ -1,23 +1,29 @@
-import React from 'react';
+import { Quote } from "./components/Quote";
+import { ThemeProvider } from "./components/ThemeContext";
+import { ThemeToggle } from "./components/ThemeToggle";
+import { Weather } from "./components/Weather";
+import { useState } from "react";
+import "./index.css";
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+export function App() {
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
-// export default App;
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
+
+  return (
+    <ThemeProvider theme={theme}>
+      <div className={`app app_${theme}`}>
+        <header className="header">
+          <h1>🌤 Погода и Цитата дня</h1>
+          <ThemeToggle onToggle={toggleTheme} />
+        </header>
+        <main>
+          <Weather />
+          <Quote />
+        </main>
+      </div>
+    </ThemeProvider>
+  );
+}

@@ -1,0 +1,103 @@
+/* Базовые настройки  */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  /*  Темы */
+  .app_light {
+    background-color: #f5f5f5;
+    color: #222;
+  }
+  
+  .app_dark {
+    background-color: #121212;
+    color: #eee;
+  }
+  
+  /*  Заголовок и переключатель темы  */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  
+  /*  Переключатель темы  */
+  .themeToggle {
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .themeToggle:hover {
+    background-color: #005a9e;
+  }
+  
+  /*  Компоненты Weather и Quote  */
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .weather,
+  .quote {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #222;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .app_dark .weather,
+  .app_dark .quote {
+    background-color: #1f1f1f;
+    color: #eee;
+  }
+  
+  .weather h2,
+  .quote h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+  
+  .weather p,
+  .quote p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  
