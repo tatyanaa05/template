@@ -1,0 +1,273 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+  margin: 20px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.artist-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.artist-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.artist-tags {
+  font-size: 14px;
+  color: #666;
+}
+
+.artist-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px;
+  gap: 10px;
+}
+
+  .track-card {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .track-card img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+  }
+  
+  .title{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .line{
+    margin: auto;
+    height: 3px;
+    width: 50px;
+    background-color: red;
+  }
+
+  .tracks-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 10%;
+  }
+
+  @media (max-width:1000px) {
+    .tracks-list{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+  }
+
+  @media (max-width:550px) {
+    .tracks-list{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    
+  }
+
+  
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;       
+    background-color: black;
+    margin: 0;
+    box-sizing: border-box;
+    gap: 10px;          
+  }
+  
+  .search-bar input[type="text"] {
+    background: none;
+    border: none;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 12px 15px;
+    width: 100%;
+    color: white;
+  }
+  
+  .search-bar button {
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 12px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-bar button:hover {
+    background-color: darkred;
+  }
+
+  .search-page {
+    padding: 32px 64px;
+    color: black;
+  }
+  
+  .search-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+/*   
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 24px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .card p {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+  } */
+  
+  .loading {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: white;
+  }
+  
+  .name {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .listeners {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 2px 0 0 0;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .track-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .play-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .track-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .track-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .track-title {
+    font-weight: 600;
+  }
+  
+  .track-artist {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .track-duration {
+    font-size: 0.85rem;
+    color: #666;
+    white-space: nowrap;
+  }
+  
